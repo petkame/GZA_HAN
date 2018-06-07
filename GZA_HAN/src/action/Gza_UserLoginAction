@@ -1,0 +1,50 @@
+import java.sql.SQLException;
+
+public class Gza_UserLoginAction {
+ Gza_DAO dao;
+ public boolean CheckIdAction(String id) {//id 존재여부 확인
+  boolean check = false;
+  dao = new Gza_DAO();
+  uinfo = dao.IdCheck(id);
+  if(uinfo == null) {
+   check = true;
+  }
+  return check;
+ }
+ 
+ 
+ public boolean CheckPwAction(String pw) {//pw 일치 확인
+  
+  boolean check = false;
+  dao = new Gza_DAO();
+  uinfo = dao.PwCheck(pw);
+  if(uinfo == null) {
+   check = true;
+  }
+  return check;
+  
+ }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
